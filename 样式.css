@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* 顶部样式*/
+.main .top {
+  margin: 0;
+  padding: 0 0 0 12.7px;
+  height: 2.7%;
+  background-color: #ecf4ec;
+}
+/*基本OK*/
+/* 上部样式*/
+.main .up {
+  height: 7%;
+  display: flex;
+  justify-content: space-around;
+}
+.main .up .left {
+  width: 46%;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 0 12px;
+}
+.main .up .left .search-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+.main .up .left .search-btn {
+  padding: 5px 10px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+/*基本OK*/
+.main .up .right {
+  width: 54%;
+  font-weight: bold;
+  padding: 1.2% 25% 2.4% 4.8%;
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+/* 中部样式*/
+.main .middle {
+  height: 24%;
+  background-color: #ecf4ec;
+  display: flex;
+  gap: 10px;
+  align-items: center; /* 垂直居中对齐 */
+  box-sizing: border-box;
+}
+/*中部左侧样式*/
+.main .middle .app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* 子元素靠右弹出 */
+  gap: -10px;
+  box-sizing: border-box;
+}
+.main .middle .app .lf {
+  flex: 0 0 50%;
+  height: 100%;
+  background-image: url("备选图.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.main .middle .app .rt {
+  margin-left: -600px;
+  flex: 1 1 50%;
+  padding: 30px 10px 20px -10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+}
+#trans {
+  padding: 5px 15px;
+  border: #8aa968 solid 1px;
+  border-radius: 2rem;
+  background-color: #8aa968;
+}
+
+/*以下部分多为AI生成*/
+/* 下部样式*/
+.main .down {
+  height: 66.3%;
+  display: flex;
+  box-sizing: border-box;
+}
+/*下部左侧的样式*/
+.selceted {
+  height: 100%;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.peek {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.mode {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.source {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.source a {
+  color: red;
+  border: blue solid 1.5px;
+  border-radius: 2rem;
+  padding: 0 10px;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 10px;
+}
+.originalTable {
+  width: 100%;
+  table-layout: fixed; /* 锁定列宽，防止内容撑开表格 */
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 14px;
+}
+
+.originalTable thead th {
+  text-align: left;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, #fafafa, #f2f2f2);
+  color: #444;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.originalTable tbody tr {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.04);
+}
+
+.originalTable th,
+.originalTable td {
+  padding: 10px 12px;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/* 让每个 td 内部作为列方向的 flex 容器并垂直居中多行内容 */
+.originalTable td {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直居中单元格内内容 */
+  gap: 6px;
+  overflow: hidden; /* 防止撑开表格 */
+}
+
+/* 链接样式：单行显示、超长用省略号 */
+.originalTable td a {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1976d2;
+}
+
+/* 如果需要某列固定宽度（示例） */
+.originalTable th:first-child,
+.originalTable td:first-child {
+  width: 180px; /* 可根据需要调整 */
+}
+/*下部右侧的样式*/
+.ano {
+  height: 80%;
+  width: 40%;
+}
+.hot {
+  height: 60%;
+  box-sizing: border-box;
+}
+.truth {
+  height: 40%;
+  box-sizing: border-box;
+}
+
+.main .down {
+  display: flex;
+  gap: 20px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+/* 左侧保留较大空间，右侧 ano 列表区固定宽度 */
+.main .down .selceted {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.main .down .ano {
+  flex: 0 0 35%; /* 可改为 240px/320px 根据屏幕调整 */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* hot / truth 卡片化，内边距与间距适中 */
+.ano .hot,
+.ano .truth {
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+/* 标题显眼但不占过多空间 */
+.ano .hot::first-line,
+.ano .truth::first-line {
+  font-weight: 600;
+  color: #666;
+}
+
+/* 列表样式紧凑、左缩进 */
+.ano ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  max-height: 140px; /* 超出则滚动，避免撑开布局 */
+  overflow-y: auto;
+}
+
+/* 列表项间距小且垂直对齐良好 */
+.ano ul li {
+  margin: 6px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 在窄屏下让 ano 收缩以保证响应式 */
+@media (max-width: 800px) {
+  .main .down {
+    flex-direction: column;
+  }
+  .main .down .ano {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
