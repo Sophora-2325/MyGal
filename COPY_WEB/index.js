@@ -1,5 +1,9 @@
 const dl = document.querySelector(".submit");
+const user = document.querySelector("#user");
+const password = document.querySelector("#password");
 dl.addEventListener("click", function (e) {
   e.preventDefault();
-  location.href = "../Data/主框架.html";
+  if (user.value == "admin" && password.value == "123456")
+    location.href = "../Data/主框架.html";
+  else alert("用户名或密码错误");
 });
