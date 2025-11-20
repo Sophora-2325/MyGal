@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 3% auto; /* 上下各留5%的空白 */
+    height: 100%;
+    background-image: linear-gradient(120deg,#e0c3fc 0%,#8ec5fc 100%);
+    overflow: hidden; /* 避免出现滚动条 */
+}
+.father {
+    display: flex; /* 横向排列子元素 */
+    height: 100%; /* 继承父元素高度，铺满屏幕 */
+    width: 100%; /* 铺满屏幕宽度 */
+    border: #caabfa 5px solid; /* 边框样式 */
+}
+        /*这是主要容器的代码区域*/
+
+        /* 外层容器：控制整体行数（2行） */
+        .grid-container {
+            width: 100%; /* 宽度占满页面 */
+            max-width: 1200px; /* 可选：限制最大宽度，避免在大屏上太宽 */
+            margin: 0 auto; /* 居中显示 */
+            padding: 20px;
+            gap: 20px; /* 行与行之间的间距 */
+        }
+
+        /* 行容器：每行包含2个格子，使用flex横向排列 */
+        .grid-row {
+            display: flex;
+            gap: 20px; /* 同一行内两个格子的间距 */
+            height: 200px; /* 每行高度（可自定义，如200px或30vh） */
+        }
+
+        /* 格子样式：每个格子占该行的50%宽度 */
+        .grid-item {
+            flex: 1; /* 自动均分该行宽度（1:1） */
+            border: 1px solid #ddd;
+            border-radius: 8px; 
+            display: flex;
+            justify-content: center; /* 内容居中 */
+            font-size: 18px;
+            background-color: #f9f9f9;
+        }
+
+        .item1 { background-color: #e6f7ff; }
+        .item2 { background-color: #fff2e8; }
+        .item3 { background-color: #f6ffed; }
+        .item4 { background-color: #fff0f0; }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .fixed-key {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+
+        .saved-url {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: white;
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .url-link {
+            color: #2196F3;
+            text-decoration: underline;
+            font-size: 14px;
+            word-break: break-all; /* 长网址自动换行 */
+            text-align: center;
+        }
+
+        .url-link:hover {
+            color: #1976D2;
+        }
+
+        .no-url {
+            color: #999;
+            font-size: 14px;
+        }
+
+/*这是左中右三区域背景的设定css*/
+.left{
+    background-image: url(left1.jpg);
+    width: 10%; 
+    background-size: cover; /* 图片自适应铺满区域 */
+    background-position: center; /* 图片居中显示 */
+}
+.right{
+    background-image: url(right.jpg);
+    width: 10%; /* 中间占70%（100%-15%-15%） */
+    background-size: cover;
+    background-position: center;
+}
+.middle{
+    background-color: white;
+    width: 80%;
+    background-size: cover;
+    background-position: center;
+}
